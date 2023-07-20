@@ -1,0 +1,28 @@
+{
+  "name": "namstereact03to06",
+  "version": "1.0.0",
+  "description": "coding from episode 02 to 06 ",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/niraj114/namasteReact02to06.git"
+  },
+  "author": "Niraj Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niraj114/namasteReact02to06/issues"
+  },
+  "homepage": "https://github.com/niraj114/namasteReact02to06#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  }
+}
