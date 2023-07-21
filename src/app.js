@@ -1,15 +1,20 @@
 import Header from "./components/Header";
 import Body from "./components/Body";
-import RestaurantCrad from "./components/RestaurantCard";
 import React from "react";
 import ReactDOM  from "react-dom/client";
+import Footer from "./components/Footer";
 
 
 // AppLayout component to render: Header, Body and Footer Component
 const AppLayout = () =>{
 
     return (
-    <><Header /><Body /><RestaurantCrad /></>
+        <React.Fragment>
+            <Header />
+            <Body />
+            <Footer/>   
+        </React.Fragment>
+
       
     );
 
