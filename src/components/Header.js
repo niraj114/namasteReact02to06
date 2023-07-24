@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 import FoodFireLogo from "../Images/Food Fire Logo.png";
 
 const Tilte = () =>(
@@ -12,9 +13,9 @@ const Header  = () =>{
          <Tilte/>
          <div className="nav-item">
             <ul>
-                <li className="handPointer">Home</li>
-                <li className="handPointer">About</li>
-                <li className="handPointer">Contact</li>
+                <li className="handPointer" ><Link to="/">Home</Link></li>
+                <li className="handPointer"><Link to="/about">About</Link></li>
+                <li className="handPointer"><Link to="/contact">Contact</Link></li>
                 <li>
                     <i className="fa-solid fa-cart-shoping"></i>
                 </li>

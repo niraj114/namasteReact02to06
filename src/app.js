@@ -5,7 +5,7 @@ import ReactDOM  from "react-dom/client";
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Contact from "./components/Contact";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage";
 
 
@@ -17,7 +17,7 @@ const AppLayout = () =>{
     return (
         <React.Fragment>
             <Header />
-            <Body />
+            <Outlet />
             <Footer/>   
         </React.Fragment>
 
@@ -31,16 +31,27 @@ const appRoute = createBrowserRouter([
     {
         path:"/",
         element:<AppLayout />,
+
+        children : [
+            {
+                path:"/",
+                element:<Body />,
+            },
+            {
+                path:"/about",
+                element:<About />,
+            },
+            {
+                path:"/contact",
+                element:<Contact />,
+            }
+
+        ],
+
         errorElement:<ErrorPage />, // it will handle error if path is not matching
+
     },
-    {
-        path:"/about",
-        element:<About />,
-    },
-    {
-        path:"/contact",
-        element:<Contact />,
-    }
+    
 
 ])
 
