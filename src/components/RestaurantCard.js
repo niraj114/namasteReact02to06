@@ -6,10 +6,13 @@ import {IMG_CDN_URL} from "../Constatnts"
 
 const RestaurantCard = (props) => {
 
-    //const {restdata} = props;
-    console.log(props)
 
-   const {name,cuisines, avgRating,cloudinaryImageId} = props.restData.data;
+    //console.log(props)
+
+    //const {restdata} = props;
+//     console.log(props)
+
+    const {name,cuisines, avgRating,cloudinaryImageId} = props.restData;
 
 
 
@@ -18,7 +21,7 @@ const RestaurantCard = (props) => {
         <div className="card">
             <img src={IMG_CDN_URL+cloudinaryImageId}/>
             <h2>{name}</h2>
-            <h5>{cuisines.join(",")}</h5>
+            <h5>{cuisines}</h5>
             <h6>{avgRating}*</h6>
         </div>
 
