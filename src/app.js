@@ -3,6 +3,12 @@ import Body from "./components/Body";
 import React from "react";
 import ReactDOM  from "react-dom/client";
 import Footer from "./components/Footer";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ErrorPage from "./components/ErrorPage";
+
+
 
 
 // AppLayout component to render: Header, Body and Footer Component
@@ -20,10 +26,29 @@ const AppLayout = () =>{
 
 }
 
+const appRoute = createBrowserRouter([
+
+    {
+        path:"/",
+        element:<AppLayout />,
+        errorElement:<ErrorPage />, // it will handle error if path is not matching
+    },
+    {
+        path:"/about",
+        element:<About />,
+    },
+    {
+        path:"/contact",
+        element:<Contact />,
+    }
+
+])
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 //passing react element inside the root
 root.render(
-<AppLayout/>
+//<AppLayout/>
+<RouterProvider router={appRoute}/>
 
 );

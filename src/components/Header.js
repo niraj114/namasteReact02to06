@@ -12,9 +12,9 @@ const Header  = () =>{
          <Tilte/>
          <div className="nav-item">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li className="handPointer">Home</li>
+                <li className="handPointer">About</li>
+                <li className="handPointer">Contact</li>
                 <li>
                     <i className="fa-solid fa-cart-shoping"></i>
                 </li>
